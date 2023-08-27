@@ -8,3 +8,12 @@ class User(models.Model):
     email = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
+
+    class meta:
+        abstract = True
+
+class Client(User):
+    pass
+
+class Seller(User):
+    pass
